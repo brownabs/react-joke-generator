@@ -36,9 +36,9 @@ export default class SetUp extends Component {
       <div className="joke-setup">
         <h2>{jokes.setup}</h2>
       <div>
-      {this.state.showPunchline ? <button onClick={this.refreshJokes}>Get Another Joke</button> : <button onClick={renderPunchlineToDom}>Get Punchline</button>
-        }
         {this.state.showPunchline ? <PunchLine key={jokes.id} joke={jokes}/> : null
+        }
+        {this.state.showPunchline ? <button onClick={this.refreshJokes}>Get Another Joke</button> : <button onClick={renderPunchlineToDom}>Get Punchline</button>
         }
       </div>
       </div>);

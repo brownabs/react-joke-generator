@@ -3,12 +3,37 @@
 @import 'variables';
 
 body {
-  background-color: $favColor;
+  background-color: black;
   font-family: 'Amatic SC', cursive;
+  display: flex;
+  justify-content: center;
 }
 
 .joke-header {
   color: white;
   font-family: 'Indie Flower', cursive;
   font-size: 5rem;
+}
+
+.joke-generator-logo {
+  height: 300px;
+  width: 600px;
+  margin-bottom: 30px;
+}
+
+.joke-setup {
+  background-color: $favColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+  width: 650px;
+  margin-left: 50px;
+  border-radius: 1em;
+  box-shadow: 5px 10px rgb(173, 2, 196);
+}
+
+button {
+  text-decoration: none;
+  border-radius: 1em;
 }

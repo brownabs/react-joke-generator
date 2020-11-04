@@ -2,6 +2,7 @@ import React from 'react';
 import './App.scss';
 import jokeData from '../helpers/data/jokeData';
 import SetUp from '../components/SetUp';
+import Image from './reactJs.png';
 
 class App extends React.Component {
   state = { jokes: [] }
@@ -17,7 +18,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1 className="joke-header">Joke Generator</h1>
+        <img src={Image} className="joke-generator-logo" alt="logo"/>
         <SetUp/>
       </div>
     );
