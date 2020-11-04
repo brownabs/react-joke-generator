@@ -1,0 +1,28 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import 'variables';
+
+body {
+  background-color: $favColor;
+  font-family: 'Amatic SC', cursive;
+}
+
+.site-header {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: white;
+  font-family: 'Indie Flower', cursive;
+}
+
+.goat-corral {
+  display: flex; 
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.Goat {
+  margin: 1rem;
+}
