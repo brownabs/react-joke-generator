@@ -5,7 +5,7 @@ import PunchLine from '../PunchLine';
 export default class SetUp extends Component {
   state = {
     jokes: [],
-    showComponent: false,
+    showPunchline: false,
   };
 
   componentDidMount() {
@@ -20,6 +20,7 @@ export default class SetUp extends Component {
     jokeData.getJokes().then((response) => {
       this.setState({
         jokes: response,
+        showPunchline: false,
       });
     });
   }
@@ -35,7 +36,7 @@ export default class SetUp extends Component {
       <div className="joke-setup">
         <h2>{jokes.setup}</h2>
       <div>
-      {!this.state.showPunchline ? <button onClick={renderPunchlineToDom}>Get Punchline</button> : <button onClick={this.refreshJokes()}>Get Another Joke</button>
+      {this.state.showPunchline ? <button onClick={this.refreshJokes}>Get Another Joke</button> : <button onClick={renderPunchlineToDom}>Get Punchline</button>
         }
         {this.state.showPunchline ? <PunchLine key={jokes.id} joke={jokes}/> : null
         }
